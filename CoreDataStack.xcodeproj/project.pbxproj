@@ -64,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		241F38C01C8AF53300CDCE14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		242BEFCF19A90B2A0063F2F2 /* CoreDataStack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataStack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		244A73A01C70F5DE00F0A002 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		244A73A11C70F5DE00F0A002 /* Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Application.xcconfig; sourceTree = "<group>"; };
@@ -273,6 +274,7 @@
 				244A73D31C7105AA00F0A002 /* CoreDataStack+UIStateRestoring.swift */,
 				244A73CB1C70FE5100F0A002 /* ModelInfo.swift */,
 				244A73CF1C70FE7800F0A002 /* StoreInfo.swift */,
+				241F38C01C8AF53300CDCE14 /* Info.plist */,
 			);
 			path = CoreDataStack;
 			sourceTree = "<group>";
