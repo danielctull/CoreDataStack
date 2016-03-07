@@ -738,7 +738,10 @@
 			baseConfigurationReference = 244A73A21C70F5DE00F0A002 /* Debug.xcconfig */;
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.danieltull.${PRODUCT_NAME:rfc1034identifier}";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WARNING_CFLAGS = (
 					"$(inherited)",
 					"-Wno-tautological-pointer-compare",
@@ -751,7 +754,10 @@
 			baseConfigurationReference = 244A73B61C70F5DE00F0A002 /* Release.xcconfig */;
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.danieltull.${PRODUCT_NAME:rfc1034identifier}";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WARNING_CFLAGS = (
 					"$(inherited)",
 					"-Wno-tautological-pointer-compare",
