@@ -3,11 +3,11 @@ import Foundation
 
 public struct ModelInfo {
 
-	public let URL: NSURL
+	public let url: URL
 	public let configuration: String?
 
-	public init(URL: NSURL, configuration: String? = nil) {
-		self.URL = URL
+	public init(url: URL, configuration: String? = nil) {
+		self.url = url
 		self.configuration = configuration
 	}
 }

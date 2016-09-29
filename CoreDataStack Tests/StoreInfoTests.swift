@@ -6,26 +6,26 @@ import CoreData
 class StoreInfoTests: XCTestCase {
 
 	func testMemory() {
-		let info = StoreInfo.Memory(options: nil)
+		let info = StoreInfo.memory(options: nil)
 		XCTAssertEqual(info.type, NSInMemoryStoreType)
 		XCTAssertNil(info.options)
-		XCTAssertNil(info.URL)
+		XCTAssertNil(info.url)
 	}
 
 	func testSQL() {
-		let URL = NSURL(string: "http://test.com")!
-		let info = StoreInfo.SQL(options: nil, URL: URL)
+		let url = URL(string: "http://test.com")!
+		let info = StoreInfo.sql(options: nil, url: url)
 		XCTAssertEqual(info.type, NSSQLiteStoreType)
 		XCTAssertNil(info.options)
-		XCTAssertEqual(info.URL, URL)
+		XCTAssertEqual(info.url, url)
 	}
 
 	func testBinary() {
-		let URL = NSURL(string: "http://test.com")!
-		let info = StoreInfo.Binary(options: nil, URL: URL)
+		let url = URL(string: "http://test.com")!
+		let info = StoreInfo.binary(options: nil, url: url)
 		XCTAssertEqual(info.type, NSBinaryStoreType)
 		XCTAssertNil(info.options)
-		XCTAssertEqual(info.URL, URL)
+		XCTAssertEqual(info.url, url)
 	}
 
 

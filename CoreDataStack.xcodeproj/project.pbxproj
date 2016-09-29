@@ -444,11 +444,13 @@
 				TargetAttributes = {
 					242BEFCE19A90B2A0063F2F2 = {
 						CreatedOnToolsVersion = 6.0;
+						LastSwiftMigration = 0800;
 					};
 					244DE7F119A9187F00A91DC7 = {
 						CreatedOnToolsVersion = 6.0;
 					};
 					24F6EBFF158A261000CEDD41 = {
+						LastSwiftMigration = 0800;
 						TestTargetID = 2437B68C15B97C2600750117;
 					};
 				};
@@ -741,6 +743,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.danieltull.${PRODUCT_NAME:rfc1034identifier}";
+				SWIFT_VERSION = 3.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WARNING_CFLAGS = (
 					"$(inherited)",
@@ -757,6 +760,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.danieltull.${PRODUCT_NAME:rfc1034identifier}";
+				SWIFT_VERSION = 3.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WARNING_CFLAGS = (
 					"$(inherited)",

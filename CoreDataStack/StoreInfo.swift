@@ -6,34 +6,34 @@ public enum StoreInfo {
 
 	public typealias Options = [String : AnyObject]
 
-	case Memory(options: Options?)
-	case SQL(options: Options?, URL: NSURL)
-	case Binary(options: Options?, URL: NSURL)
+	case memory(options: Options?)
+	case sql(options: Options?, url: URL)
+	case binary(options: Options?, url: URL)
 }
 
 extension StoreInfo {
 
 	var type: String {
 		switch self {
-			case .Memory: return NSInMemoryStoreType
-			case .SQL: return NSSQLiteStoreType
-			case .Binary: return NSBinaryStoreType
+			case .memory: return NSInMemoryStoreType
+			case .sql: return NSSQLiteStoreType
+			case .binary: return NSBinaryStoreType
 		}
 	}
 
-	var URL: NSURL? {
+	var url: URL? {
 		switch self {
-			case .Memory: return nil
-			case .SQL(_, let URL): return URL
-			case .Binary(_, let URL): return URL
+			case .memory: return nil
+			case .sql(_, let URL): return URL
+			case .binary(_, let URL): return URL
 		}
 	}
 
 	var options: Options? {
 		switch self {
-			case .Memory(let options): return options
-			case .SQL(let options, _): return options
-			case .Binary(let options, _): return options
+			case .memory(let options): return options
+			case .sql(let options, _): return options
+			case .binary(let options, _): return options
 		}
 	}
 }

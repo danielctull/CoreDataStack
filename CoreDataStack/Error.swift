@@ -1,4 +1,4 @@
 
-enum Error: ErrorType {
-	case InvalidModelURL
+enum Error: Swift.Error {
+	case invalidModelURL
 }

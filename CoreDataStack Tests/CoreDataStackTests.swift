@@ -4,13 +4,13 @@ import CoreDataStack
 
 class CoreDataStackTests: XCTestCase {
 
-	var modelURL: NSURL {
-		return NSBundle(forClass: CoreDataStackTests.self).URLForResource("Model", withExtension: "momd")!
+	var modelURL: URL {
+		return Bundle(for: CoreDataStackTests.self).url(forResource: "Model", withExtension: "momd")!
 	}
 
 	func testMemoryStack() {
-		let storeInfo = StoreInfo.Memory(options: nil)
-		let modelInfo = ModelInfo(URL: modelURL)
+		let storeInfo = StoreInfo.memory(options: nil)
+		let modelInfo = ModelInfo(url: modelURL)
 		let stack = CoreDataStack(modelInfo: modelInfo, storeInfo: storeInfo)
 
 		let model = try! stack.managedObjectModel()

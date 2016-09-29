@@ -14,8 +14,8 @@ public class CoreDataStack {
 
 	public func destroyStore() throws {
 
-		if let URL = storeInfo.URL {
-			try _coordinator?.destroyPersistentStoreAtURL(URL, withType: storeInfo.type, options: storeInfo.options)
+		if let URL = storeInfo.url {
+			try _coordinator?.destroyPersistentStore(at: URL as URL, ofType: storeInfo.type, options: storeInfo.options)
 		}
 
 		_coordinator = nil
@@ -31,8 +31,8 @@ public class CoreDataStack {
 			return model
 		}
 
-		guard let model = NSManagedObjectModel(contentsOfURL: modelInfo.URL) else {
-			throw Error.InvalidModelURL
+		guard let model = NSManagedObjectModel(contentsOf: modelInfo.url) else {
+			throw Error.invalidModelURL
 		}
 
 		_model = model
@@ -50,7 +50,7 @@ public class CoreDataStack {
 
 		let model = try managedObjectModel()
 		let coordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
-		try coordinator.addPersistentStoreWithType(storeInfo.type, configuration: modelInfo.configuration, URL: storeInfo.URL, options: storeInfo.options)
+		try coordinator.addPersistentStore(ofType: storeInfo.type, configurationName: modelInfo.configuration, at: storeInfo.url, options: storeInfo.options)
 
 		_coordinator = coordinator
 		return coordinator
@@ -66,7 +66,7 @@ public class CoreDataStack {
 		}
 
 		let coordinator = try persistentStoreCoordinator()
-		let context = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
+		let context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
 		context.persistentStoreCoordinator = coordinator
 
 		_context = context

@@ -5,17 +5,17 @@ import CoreDataStack
 class ModelInfoTests: XCTestCase {
 
 	func testModelInfo() {
-		let URL = NSURL(string: "http://test.com")!
-		let info = ModelInfo(URL: URL)
-		XCTAssertEqual(info.URL, URL)
+		let url = URL(string: "http://test.com")!
+		let info = ModelInfo(url: url)
+		XCTAssertEqual(info.url, url)
 		XCTAssertNil(info.configuration)
 	}
 
 	func testConfiguration() {
-		let URL = NSURL(string: "http://test.com")!
+		let url = URL(string: "http://test.com")!
 		let configuration = "Configuration"
-		let info = ModelInfo(URL: URL, configuration: configuration)
-		XCTAssertEqual(info.URL, URL)
+		let info = ModelInfo(url: url, configuration: configuration)
+		XCTAssertEqual(info.url, url)
 		XCTAssertEqual(info.configuration, configuration)
 	}
 }
