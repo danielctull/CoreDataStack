@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		242BF03219A913880063F2F2 /* DCTCoreDataStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F6EBF8158A261000CEDD41 /* DCTCoreDataStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		244A439B1D9D08F6009A622C /* ModelInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244A73CB1C70FE5100F0A002 /* ModelInfo.swift */; };
+		244A439C1D9D08F6009A622C /* StoreInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244A73CF1C70FE7800F0A002 /* StoreInfo.swift */; };
+		244A439D1D9D08F6009A622C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244A73C71C70FAB100F0A002 /* CoreDataStack.swift */; };
+		244A439E1D9D08F6009A622C /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244A73D61C71BC4100F0A002 /* Error.swift */; };
+		244A43A11D9D08F6009A622C /* DCTCoreDataStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F6EBF8158A261000CEDD41 /* DCTCoreDataStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		244A73C81C70FAB100F0A002 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244A73C71C70FAB100F0A002 /* CoreDataStack.swift */; };
 		244A73C91C70FAB100F0A002 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244A73C71C70FAB100F0A002 /* CoreDataStack.swift */; };
 		244A73CA1C70FAB100F0A002 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244A73C71C70FAB100F0A002 /* CoreDataStack.swift */; };
@@ -98,6 +103,7 @@
 		244A43961D9D0787009A622C /* watchOS Extension.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "watchOS Extension.xcconfig"; sourceTree = "<group>"; };
 		244A43971D9D0787009A622C /* watchOS Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "watchOS Framework.xcconfig"; sourceTree = "<group>"; };
 		244A43981D9D0787009A622C /* watchOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = watchOS.xcconfig; sourceTree = "<group>"; };
+		244A43A71D9D08F6009A622C /* CoreDataStack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataStack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		244A73C71C70FAB100F0A002 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		244A73CB1C70FE5100F0A002 /* ModelInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelInfo.swift; sourceTree = "<group>"; };
 		244A73CF1C70FE7800F0A002 /* StoreInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreInfo.swift; sourceTree = "<group>"; };
@@ -118,6 +124,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		242BEFCB19A90B2A0063F2F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		244A439F1D9D08F6009A622C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -263,6 +276,7 @@
 				248B72D31B9376CD0072B58C /* CoreDataStack Tests.xctest */,
 				2473F1C21BC856080075EA00 /* CoreDataStack.framework */,
 				2473F1CE1BC856110075EA00 /* CoreDataStack Tests.xctest */,
+				244A43A71D9D08F6009A622C /* CoreDataStack.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -304,6 +318,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		244A43A01D9D08F6009A622C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				244A43A11D9D08F6009A622C /* DCTCoreDataStack.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		244DE7EF19A9187F00A91DC7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -342,9 +364,28 @@
 			productReference = 242BEFCF19A90B2A0063F2F2 /* CoreDataStack.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		244DE7F119A9187F00A91DC7 /* CoreDataStack OS X */ = {
+		244A43991D9D08F6009A622C /* CoreDataStack watchOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 244DE80219A9187F00A91DC7 /* Build configuration list for PBXNativeTarget "CoreDataStack OS X" */;
+			buildConfigurationList = 244A43A41D9D08F6009A622C /* Build configuration list for PBXNativeTarget "CoreDataStack watchOS" */;
+			buildPhases = (
+				244A439A1D9D08F6009A622C /* Sources */,
+				244A439F1D9D08F6009A622C /* Frameworks */,
+				244A43A01D9D08F6009A622C /* Headers */,
+				244A43A21D9D08F6009A622C /* Resources */,
+				244A43A31D9D08F6009A622C /* Documentation */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CoreDataStack watchOS";
+			productName = "DCTCoreDataStack iOS";
+			productReference = 244A43A71D9D08F6009A622C /* CoreDataStack.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		244DE7F119A9187F00A91DC7 /* CoreDataStack macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 244DE80219A9187F00A91DC7 /* Build configuration list for PBXNativeTarget "CoreDataStack macOS" */;
 			buildPhases = (
 				244DE7ED19A9187F00A91DC7 /* Sources */,
 				244DE7EE19A9187F00A91DC7 /* Frameworks */,
@@ -356,7 +397,7 @@
 			);
 			dependencies = (
 			);
-			name = "CoreDataStack OS X";
+			name = "CoreDataStack macOS";
 			productName = "DCTCoreDataStack OS X";
 			productReference = 244DE7F219A9187F00A91DC7 /* CoreDataStack.framework */;
 			productType = "com.apple.product-type.framework";
@@ -398,9 +439,9 @@
 			productReference = 2473F1CE1BC856110075EA00 /* CoreDataStack Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		248B72CA1B9376CD0072B58C /* CoreDataStack OS X Tests */ = {
+		248B72CA1B9376CD0072B58C /* CoreDataStack macOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 248B72D01B9376CD0072B58C /* Build configuration list for PBXNativeTarget "CoreDataStack OS X Tests" */;
+			buildConfigurationList = 248B72D01B9376CD0072B58C /* Build configuration list for PBXNativeTarget "CoreDataStack macOS Tests" */;
 			buildPhases = (
 				248B72CB1B9376CD0072B58C /* Sources */,
 				248B72CD1B9376CD0072B58C /* Frameworks */,
@@ -411,7 +452,7 @@
 			dependencies = (
 				248B72DB1B93773F0072B58C /* PBXTargetDependency */,
 			);
-			name = "CoreDataStack OS X Tests";
+			name = "CoreDataStack macOS Tests";
 			productName = DCTCoreDataStackTests;
 			productReference = 248B72D31B9376CD0072B58C /* CoreDataStack Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -451,6 +492,9 @@
 					244DE7F119A9187F00A91DC7 = {
 						CreatedOnToolsVersion = 6.0;
 					};
+					248B72CA1B9376CD0072B58C = {
+						ProvisioningStyle = Automatic;
+					};
 					24F6EBFF158A261000CEDD41 = {
 						LastSwiftMigration = 0800;
 						TestTargetID = 2437B68C15B97C2600750117;
@@ -470,10 +514,11 @@
 			projectRoot = "";
 			targets = (
 				242BEFCE19A90B2A0063F2F2 /* CoreDataStack iOS */,
-				244DE7F119A9187F00A91DC7 /* CoreDataStack OS X */,
+				244DE7F119A9187F00A91DC7 /* CoreDataStack macOS */,
 				2473F1B31BC856080075EA00 /* CoreDataStack tvOS */,
+				244A43991D9D08F6009A622C /* CoreDataStack watchOS */,
 				24F6EBFF158A261000CEDD41 /* CoreDataStack iOS Tests */,
-				248B72CA1B9376CD0072B58C /* CoreDataStack OS X Tests */,
+				248B72CA1B9376CD0072B58C /* CoreDataStack macOS Tests */,
 				2473F1C31BC856110075EA00 /* CoreDataStack tvOS Tests */,
 			);
 		};
@@ -481,6 +526,13 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		242BEFCD19A90B2A0063F2F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		244A43A21D9D08F6009A622C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -553,6 +605,20 @@
 			shellPath = /bin/sh;
 			shellScript = "./Scripts/documentation.sh -c \"Daniel Tull\" -i \"uk.co.danieltull\" > /dev/null 2>&1 &\n";
 		};
+		244A43A31D9D08F6009A622C /* Documentation */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Documentation;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Scripts/documentation.sh -c \"Daniel Tull\" -i \"uk.co.danieltull\" > /dev/null 2>&1 &\n";
+		};
 		2473F1BE1BC856080075EA00 /* Documentation */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -578,6 +644,17 @@
 				244A73D01C70FE7800F0A002 /* StoreInfo.swift in Sources */,
 				244A73C81C70FAB100F0A002 /* CoreDataStack.swift in Sources */,
 				244A73D71C71BC4100F0A002 /* Error.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		244A439A1D9D08F6009A622C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				244A439B1D9D08F6009A622C /* ModelInfo.swift in Sources */,
+				244A439C1D9D08F6009A622C /* StoreInfo.swift in Sources */,
+				244A439D1D9D08F6009A622C /* CoreDataStack.swift in Sources */,
+				244A439E1D9D08F6009A622C /* Error.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,7 +723,7 @@
 		};
 		248B72DB1B93773F0072B58C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 244DE7F119A9187F00A91DC7 /* CoreDataStack OS X */;
+			target = 244DE7F119A9187F00A91DC7 /* CoreDataStack macOS */;
 			targetProxy = 248B72DA1B93773F0072B58C /* PBXContainerItemProxy */;
 		};
 		248B72DE1B93774B0072B58C /* PBXTargetDependency */ = {
@@ -668,6 +745,22 @@
 		242BEFE119A90B2B0063F2F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 244A43791D9D0787009A622C /* iOS Framework.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = CoreDataStack;
+			};
+			name = Release;
+		};
+		244A43A51D9D08F6009A622C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 244A43971D9D0787009A622C /* watchOS Framework.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = CoreDataStack;
+			};
+			name = Debug;
+		};
+		244A43A61D9D08F6009A622C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 244A43971D9D0787009A622C /* watchOS Framework.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = CoreDataStack;
 			};
@@ -799,7 +892,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		244DE80219A9187F00A91DC7 /* Build configuration list for PBXNativeTarget "CoreDataStack OS X" */ = {
+		244A43A41D9D08F6009A622C /* Build configuration list for PBXNativeTarget "CoreDataStack watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				244A43A51D9D08F6009A622C /* Debug */,
+				244A43A61D9D08F6009A622C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		244DE80219A9187F00A91DC7 /* Build configuration list for PBXNativeTarget "CoreDataStack macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				244DE80319A9187F00A91DC7 /* Debug */,
@@ -826,7 +928,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		248B72D01B9376CD0072B58C /* Build configuration list for PBXNativeTarget "CoreDataStack OS X Tests" */ = {
+		248B72D01B9376CD0072B58C /* Build configuration list for PBXNativeTarget "CoreDataStack macOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				248B72D11B9376CD0072B58C /* Debug */,
